@@ -24,6 +24,5 @@ export class SendNotification {
     return {
       notification
     }
-
   }
 }
