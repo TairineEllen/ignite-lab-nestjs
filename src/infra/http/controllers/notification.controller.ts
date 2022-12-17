@@ -17,6 +17,8 @@ export class NotificationController {
       category
     });
     
-    return { notification: NotificationViewModel.toHttp(notification) }
+    return { 
+      notification: NotificationViewModel.toHttp(notification)
+    }
   }
 }
