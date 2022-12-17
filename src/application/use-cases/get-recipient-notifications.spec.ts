@@ -19,6 +19,6 @@ describe('Get recipients notifications', () => {
     expect(notifications).toEqual(expect.arrayContaining([
       expect.objectContaining({ recipientId: 'id-1' }),
       expect.objectContaining({ recipientId: 'id-1' }),
-    ]))
+    ]));
   });  
 });
