@@ -4,7 +4,7 @@ import { CountRecipientNotifications } from "./count-recipient-notifications";
 
 describe('Count recipients notifications', () => {
   it('should be able to count recipients notifications', async () => {
-    const repository = new InMemoryNotificationsRepository()
+    const repository = new InMemoryNotificationsRepository();
     const countRecipientNotifications = new CountRecipientNotifications(repository);
   
     await repository.create(makeNotification({ recipientId: 'id-1'}));

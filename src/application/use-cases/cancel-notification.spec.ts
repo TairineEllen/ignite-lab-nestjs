@@ -1,16 +1,12 @@
-import { Content } from "@application/entities/notification-content";
 import { makeNotification } from "@test/factories/notification-factory";
 import { InMemoryNotificationsRepository } from "@test/repositories/in-memory-notifications-repository";
-import { Notification, NotificationProps } from "../entities/notification";
+import { NotificationProps } from "../entities/notification";
 import { CancelNotification } from './cancel-notification';
 import { NotificationNotFound } from "./errors/notification-not-found";
 
-let notifications: NotificationProps[] = []
-
-
-describe('Send notification', () => {
+describe('Cancel notification', () => {
   it('should be able to cancel a notification', async () => {
-    const repository = new InMemoryNotificationsRepository()
+    const repository = new InMemoryNotificationsRepository();
     const cancelNotification = new CancelNotification(repository);
 
     const notification = makeNotification();
@@ -25,7 +21,7 @@ describe('Send notification', () => {
   });
 
   it('should not be able to cancel a non existing notification', async () => {
-    const repository = new InMemoryNotificationsRepository()
+    const repository = new InMemoryNotificationsRepository();
     const cancelNotification = new CancelNotification(repository);
 
     expect(() => {

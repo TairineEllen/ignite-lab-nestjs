@@ -8,10 +8,8 @@ describe('Notification ', () => {
       category: 'social',
       recipientId: 'id',
       createdAt: new Date()
-    })
+    });
   
     expect(notification).toBeTruthy();
-  });
-  
-  
-})
+  });  
+});

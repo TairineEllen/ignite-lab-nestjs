@@ -9,5 +9,5 @@ export function makeNotification(override: Override = {}) {
     content: new Content('Nova solicitação de amizade'),
     recipientId: 'id-1',
     ...override
-  })
+  });
 }

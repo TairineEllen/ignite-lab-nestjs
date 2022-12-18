@@ -38,8 +38,7 @@ export class NotificationController {
   async cancel(@Param('id') id: string) {
     await this.cancelNotification.execute({
       notificationId: id
-    })
-
+    });
   }
 
   @Get('/count/from/:recipientId')
@@ -68,13 +67,13 @@ export class NotificationController {
   async read(@Param('id') id: string) {
     await this.readNotification.execute({
       notificationId: id
-    })
+    });
   }
 
   @Patch(':id/unread')
   async unread(@Param('id') id: string) {
     await this.unreadNotification.execute({
       notificationId: id
-    })
+    });
   }
 }
